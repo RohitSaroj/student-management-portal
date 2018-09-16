@@ -1,0 +1,28 @@
+<div class="dashboard-main-holder vertical-horizontal-center">
+    <div class="envelope-holder">
+        <img src="assets/images/envelope.jpg" />
+    </div>
+    <div class="account-board">
+    {{#if isLoginPage}}
+        <div class="account-header text-center common-header-footer-margin">{{loginAccountHeaderText}}</div>
+    {{else}}
+        <div class="account-header text-center common-header-footer-margin">{{newAccountHeaderText}}</div>
+    {{/if}}
+        <div class="account-form">
+            <div class="userid-details form-group">
+                <label for="userid" class="userid-label">{{userIDLabel}}</label>
+                <input type="text" class="userid-field form-control" id="userid" />
+            </div>
+            <div class="password-details form-group">
+                <label for="userPassword" class="password-label">{{passwordLabel}}</label>
+                <input type="text" class="password-field form-control" id="userPassword"/>
+            </div>
+            <div class="submit-button-container text-center">
+                <input type="button" class="btn" value={{submitButtonText}} />
+            </div>
+        </div>
+    {{#if isLoginPage}}
+        <div class="forgot-or-claim-account text-center common-header-footer-margin">{{forgotOrClaimAccountText}}</div>
+    {{/if}}
+    </div>
+</div>
