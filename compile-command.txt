@@ -1,0 +1,7 @@
+handlebars login.handlebars -f login.js
+
+stylus -w login.styl
+
+npm run build-project
+
+npm start

@@ -1,14 +1,14 @@
 define(
-    ["teacher-portal/dashboard/models/dashboard-model",
-    "teacher-portal/dashboard/views/dashboard-view"],
-function(DashboardModel, DashboardView) {
+    ["teacher-portal/login/models/login-model",
+    "teacher-portal/login/views/login-view"],
+function(LoginModel, LoginView) {
     "use strict";
 
-    var mainDashboardModel = new DashboardModel({}),
-        mainDashboardView = new DashboardView({
-            "model": mainDashboardModel,
+    var mainLoginModel = new LoginModel({}),
+        mainLoginView = new LoginView({
+            "model": mainLoginModel,
             "el": ".app-holder"
         });
 
-    mainDashboardView.render();
+    mainLoginView.render();
 });

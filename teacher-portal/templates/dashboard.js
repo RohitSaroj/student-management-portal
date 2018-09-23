@@ -1,0 +1,6 @@
+(function() {
+  var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};
+templates['dashboard'] = template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
+    return "<div class=\"dashboard\">\r\n    <div class=\"dashboard-head\">\r\n        <div class=\"lead-logo-container text-center container d-inline-block\">LEAD Logo</div>\r\n        <div class=\"profile-info-container d-inline-block\">\r\n            <span class=\"notification fas fa-bell\"></span>\r\n            <div class=\"profile-name-info d-inline-block\"><span class=\"fas fa-user\"></span> Person Name</div>\r\n        </div>\r\n    </div>\r\n    <div class=\"dashboard-body\">\r\n        <div class=\"students-control-container d-inline-block\">\r\n            <div class=\"list-group\">\r\n                <div class=\"list-group-item\">Students</div>\r\n                <div class=\"list-group-item list-group-item-action view-students\">- View Students</div>\r\n                <div class=\"list-group-item list-group-item-action add-student\">- Add Student</div>\r\n            </div>\r\n        </div>\r\n        <div class=\"students-view-container\">\r\n        </div>\r\n    </div>\r\n</div>";
+},"useData":true});
+})();

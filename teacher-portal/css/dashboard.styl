@@ -1,35 +1,25 @@
-.dashboard-main-holder {
-    width: 420px;
-    height: 460px;
-    overflow: unset;
-    .envelope-holder {
-        text-align: center;
-        padding-bottom: 10px;
-    }
-    .account-board {
-        border: 1px solid #636363;
-        background-color: #eeeeee;
-        .account-header {
-            font-size: 1.4rem;
+.dashboard {
+    min-width: 350px;
+    .dashboard-head {
+        border: 1px solid;
+        .lead-logo-container {
+            width: 150px;
+            height: 35px;
+            border: 1px solid;
+            margin: 5px;
+            line-height: 2;
         }
-        .account-form {
-            width: 70%;
-            margin: auto;
-            .submit-button-container {
-                .btn {
-                    width: 150px;
-                    border: 1px solid #636363;
-                    padding: 3px 3px;
-                }
+        .profile-info-container {
+            float: right;
+            margin: 5px;
+            line-height: 2;
+            .profile-name-info {
+                margin-left: 15px;
             }
         }
-        .forgot-or-claim-account {
-            color: blue;
-            text-decoration: underline;
-            cursor: pointer;
-        }
-        .common-header-footer-margin {
-            margin: 20px 20px;
-        }
     }
+    .dashboard-body {
+        border: 1px solid black;
+        border-top: none;
+    }   
 }

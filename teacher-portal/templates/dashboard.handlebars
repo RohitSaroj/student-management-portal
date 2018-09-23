@@ -1,28 +1,20 @@
-<div class="dashboard-main-holder vertical-horizontal-center">
-    <div class="envelope-holder">
-        <img src="assets/images/envelope.jpg" />
+<div class="dashboard">
+    <div class="dashboard-head">
+        <div class="lead-logo-container text-center container d-inline-block">LEAD Logo</div>
+        <div class="profile-info-container d-inline-block">
+            <span class="notification fas fa-bell"></span>
+            <div class="profile-name-info d-inline-block"><span class="fas fa-user"></span> Person Name</div>
+        </div>
     </div>
-    <div class="account-board">
-    {{#if isLoginPage}}
-        <div class="account-header text-center common-header-footer-margin">{{loginAccountHeaderText}}</div>
-    {{else}}
-        <div class="account-header text-center common-header-footer-margin">{{newAccountHeaderText}}</div>
-    {{/if}}
-        <div class="account-form">
-            <div class="userid-details form-group">
-                <label for="userid" class="userid-label">{{userIDLabel}}</label>
-                <input type="text" class="userid-field form-control" id="userid" />
-            </div>
-            <div class="password-details form-group">
-                <label for="userPassword" class="password-label">{{passwordLabel}}</label>
-                <input type="text" class="password-field form-control" id="userPassword"/>
-            </div>
-            <div class="submit-button-container text-center">
-                <input type="button" class="btn" value={{submitButtonText}} />
+    <div class="dashboard-body">
+        <div class="students-control-container d-inline-block">
+            <div class="list-group">
+                <div class="list-group-item">Students</div>
+                <div class="list-group-item list-group-item-action view-students">- View Students</div>
+                <div class="list-group-item list-group-item-action add-student">- Add Student</div>
             </div>
         </div>
-    {{#if isLoginPage}}
-        <div class="forgot-or-claim-account text-center common-header-footer-margin">{{forgotOrClaimAccountText}}</div>
-    {{/if}}
+        <div class="students-view-container">
+        </div>
     </div>
 </div>
