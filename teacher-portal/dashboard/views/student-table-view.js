@@ -1,7 +1,9 @@
 define(
-    ["teacher-portal/templates/student-datatable",
+    ["teacher-portal/dashboard/models/student-add-edit-model",
+     "teacher-portal/dashboard/views/student-add-edit-view",
+     "teacher-portal/templates/student-datatable",
      "teacher-portal/templates/datatable-actions-cell"],
-    function(studentDatatableTpl, actionsCellTpl) {
+    function(StudentAddEditModel, StudentAddEditView, studentDatatableTpl, actionsCellTpl) {
         "use strict";
     
         var StudentTableView = Backbone.View.extend({
@@ -68,22 +70,27 @@ define(
                     "info": false,
                     "dom": 'tp',
                     "columnDefs": customColumnRenderRule,
-                    "responsive": true,
-                    "responsive": {
-                        breakpoints : [
-                            { name: 'desktop', width: Infinity },
-                            { name: 'tablet',  width: 1024 },
-                            { name: 'fablet',  width: 768 },
-                            { name: 'phone',   width: 480 }
-                        ]
-                    }
+                    "responsive": true
                 }
                     
                 this.$('#dashboardTable').DataTable(dataTableConfig);
             },
 
             "renderEditPage": function(event) {
-                
+                this.destroy();
+                var modelOptions = {
+                    "isEditMode": true
+                },
+                studentAddEditModel = new StudentAddEditModel(modelOptions);
+                if (this.studentAddEditView) {
+                    this.studentAddEditView.destroy();
+                    this.studentAddEditView = null;
+                }
+                this.studentAddEditView = new StudentAddEditView({
+                    "el": ".students-view-container",
+                    "model": studentAddEditModel
+                });
+                this.studentAddEditView.render();
             },
 
             "destroy": function() {

@@ -1,6 +1,6 @@
 define(
-    ["teacher-portal/templates/dashboard"],
-    function(dashboardTpl) {
+    ["teacher-portal/templates/student-add-edit"],
+    function(studentAddEditTpl) {
         "use strict";
     
         var StudentAddEditView = Backbone.View.extend({
@@ -16,11 +16,23 @@ define(
             },
 
             "render": function() {
-                var dashboardTpl = Handlebars.templates['dashboard'];
+                var studentAddEditTpl = Handlebars.templates['student-add-edit'],
+                    isEditMode = this.model.get("isEditMode"),
+                    templateOptions = {};
 
-                this.$el.append(dashboardTpl());
-                this.renderStudentTableView();
-                this.updateActiveListHighlight(DashboardView.ACTIONS.VIEW_STUDENTS);
+                if (isEditMode) {
+                    templateOptions.headerText = "Edit Student";
+                } else {
+                    templateOptions.headerText = "Add Student";
+                }
+                this.$el.append(studentAddEditTpl(templateOptions));
+                this.$(".datepicker").datepicker();
+            },
+
+            "destroy": function() {
+                this.unbind();
+                this.model.destroy();
+                this.$el.off().empty();
             }
         });
         return StudentAddEditView;

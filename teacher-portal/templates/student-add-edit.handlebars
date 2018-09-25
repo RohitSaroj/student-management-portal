@@ -1,0 +1,40 @@
+<div class="add-edit-student-container">
+    <div class="header pb-2 mt-4 mb-2 border-bottom"><h4>{{headerText}}</h4></div>
+    <div class="body">
+        <div class="name-container form-group row">
+            <label for="name" class="col-sm-4">Name</label>
+            <input type="text" class="form-control col-sm-6" />
+        </div>
+        <div class="dob-container form-group row">
+            <label for="dob" class="col-sm-4">Date of Birth</label>
+            <input type="text" class="datepicker form-control col-sm-6" ></input>
+        </div>
+        <div class="school-container form-group row">
+            <label for="school" class="col-sm-4">School</label>
+            <select type="text" class="school form-control col-sm-6" ></select>
+        </div>
+        <div class="class-container form-group row">
+            <label for="class" class="col-sm-4">Class</label>
+            <select type="text" class="class form-control col-sm-6" /></select>
+        </div>
+        <div class="dob-container form-group row">
+            <label for="division" class="col-sm-4">Division</label>
+            <select type="text" class="division form-control col-sm-6" /></select>
+        </div>
+        <div class="dob-container form-group row">
+            <label for="status" class="col-sm-4">Status</label>
+            <div class="col-sm-6">
+                <input type="radio" id="statusActive" class="status form-control" name="active-status"/>
+                <label for="statusActive">Active</label>
+                <input type="radio" id="statusInActive" class="status form-control" name="active-status"/>
+                <label for="statusInActive">InActive</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-6">
+                <button class="save-btn btn btn-block">Save</button>
+            </div>
+        </div>
+    </div>
+</div>

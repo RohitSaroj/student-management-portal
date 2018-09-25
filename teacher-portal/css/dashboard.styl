@@ -21,5 +21,42 @@
     .dashboard-body {
         border: 1px solid black;
         border-top: none;
+        border-bottom: none;
+        .students-control-container {
+            vertical-align: text-top;
+            height: 92vh;
+            overflow: hidden;
+            .list-group-item {
+                height: 40px;
+                line-height: 1;
+                width: 200px;
+            }
+            .list-group-item-action {
+                cursor: pointer;
+                &.active {
+                    background-color: #95bcf2;
+                }
+            }
+        }
+        .students-view-container {
+            vertical-align: text-top;
+            #dashboardTable {
+                th {
+                    background-color: #95bcf2;
+                }
+                .actions-cell {
+                    .action {
+                        text-decoration: underline;
+                    }
+                }
+            }
+            .add-edit-student-container {
+                min-width : 500px;
+                input[type=radio] {
+                    display: inline-block;
+                    width: auto;
+                }
+            }
+        }
     }   
 }

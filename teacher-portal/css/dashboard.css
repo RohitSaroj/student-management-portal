@@ -22,4 +22,37 @@
 .dashboard .dashboard-body {
   border: 1px solid #000;
   border-top: none;
+  border-bottom: none;
+}
+.dashboard .dashboard-body .students-control-container {
+  vertical-align: text-top;
+  height: 92vh;
+  overflow: hidden;
+}
+.dashboard .dashboard-body .students-control-container .list-group-item {
+  height: 40px;
+  line-height: 1;
+  width: 200px;
+}
+.dashboard .dashboard-body .students-control-container .list-group-item-action {
+  cursor: pointer;
+}
+.dashboard .dashboard-body .students-control-container .list-group-item-action.active {
+  background-color: #95bcf2;
+}
+.dashboard .dashboard-body .students-view-container {
+  vertical-align: text-top;
+}
+.dashboard .dashboard-body .students-view-container #dashboardTable th {
+  background-color: #95bcf2;
+}
+.dashboard .dashboard-body .students-view-container #dashboardTable .actions-cell .action {
+  text-decoration: underline;
+}
+.dashboard .dashboard-body .students-view-container .add-edit-student-container {
+  min-width: 500px;
+}
+.dashboard .dashboard-body .students-view-container .add-edit-student-container input[type=radio] {
+  display: inline-block;
+  width: auto;
 }
