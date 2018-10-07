@@ -1,0 +1,6 @@
+(function() {
+  var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};
+templates['student-search-panel'] = template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
+    return "<div class=\"student-search container\">\r\n    <div class=\"row\">\r\n        <div class=\"col-2 pl-0\">\r\n            <input type=\"text\" class=\"form-control\" id=\"name\" placeholder=\"Name\">\r\n        </div>\r\n        <div class=\"col-2\">\r\n            <input type=\"text\" class=\"form-control\" id=\"age\" placeholder=\"Age\">\r\n        </div>\r\n        <div class=\"col-2\">\r\n            <select class=\"form-control\" id=\"school\"></select>\r\n        </div>\r\n        <div class=\"col-2\">\r\n            <select class=\"form-control\" id=\"class\"></select>\r\n        </div>\r\n        <div class=\"col-2\">\r\n            <select class=\"form-control\" id=\"division\"></select>\r\n        </div>\r\n        <button type=\"submit\" class=\"btn btn-default col-2\">Search</button>\r\n    </div>\r\n</div>";
+},"useData":true});
+})();

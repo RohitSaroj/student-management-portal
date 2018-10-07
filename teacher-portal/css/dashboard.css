@@ -5,7 +5,7 @@
   border: 1px solid;
 }
 .dashboard .dashboard-head .lead-logo-container {
-  width: 150px;
+  width: 194px;
   height: 35px;
   border: 1px solid;
   margin: 5px;
@@ -23,6 +23,7 @@
   border: 1px solid #000;
   border-top: none;
   border-bottom: none;
+  min-width: 1080px;
 }
 .dashboard .dashboard-body .students-control-container {
   vertical-align: text-top;

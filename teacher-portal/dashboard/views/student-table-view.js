@@ -2,8 +2,9 @@ define(
     ["teacher-portal/dashboard/models/student-add-edit-model",
      "teacher-portal/dashboard/views/student-add-edit-view",
      "teacher-portal/templates/student-datatable",
-     "teacher-portal/templates/datatable-actions-cell"],
-    function(StudentAddEditModel, StudentAddEditView, studentDatatableTpl, actionsCellTpl) {
+     "teacher-portal/templates/datatable-actions-cell",
+     "teacher-portal/templates/student-search-panel"],
+    function(StudentAddEditModel, StudentAddEditView, studentDatatableTpl, actionsCellTpl, studentSearchPanel) {
         "use strict";
     
         var StudentTableView = Backbone.View.extend({
@@ -22,6 +23,7 @@ define(
                 var studentDatatableTpl = Handlebars.templates['student-datatable'];
 
                 this.$el.append(studentDatatableTpl());
+                this.renderSearchPanel();
                 this.renderStudentDataTable();
             },
 
@@ -74,6 +76,11 @@ define(
                 }
                     
                 this.$('#dashboardTable').DataTable(dataTableConfig);
+            },
+
+            "renderSearchPanel": function() {
+                var studentSearchPanel = Handlebars.templates['student-search-panel'];
+                this.$(".student-search-panel").append(studentSearchPanel());
             },
 
             "renderEditPage": function(event) {
